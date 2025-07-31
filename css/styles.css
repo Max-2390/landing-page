@@ -1,0 +1,193 @@
+body {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+  display: flex; 
+  justify-content: space-between;   /* adds space between logo and links */
+  background-color: rgb(52, 52, 71);  /*color of background */
+  color: white;   /* text font color */
+  padding: 20px 160px;  /*shortcut for padding top/bottom, left/right */
+  height: 350px; 
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;  /* makes font bond */
+  font-size: 20px;  /* makes font larger */
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+  height: 20px;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  position: relative;
+  display: inline-block;    /* Ensures the pseudo-element respects width */
+  padding-bottom: 2px;      /* Reduce to better align with text */
+  line-height: 1;           /* Prevents extra vertical space */
+}
+
+
+.links a::after {
+  content: '';              /* Creates the pseudo-element */
+  position: absolute;
+  bottom: 0;                /* Puts it at the bottom of the link */
+  left: 0;                  /* Starts at the left edge */
+  height: 2px;              /* Thickness of the underline */
+  width: 0%;                /* Starts invisible */
+  background-color: white;  /* Color of the underline */
+  transition: width 0.4s ease;  /* Smooth animation */
+}
+
+
+.links a:hover::after {
+  width: 100%;   /* Expands to full width under the link */
+}
+
+h1 {
+  width: 200px;
+  color: white;
+}
+
+.hero-content {
+  width: 375px;
+  margin-bottom: 50px;
+  
+}
+
+button {
+  width: 90px;
+  border-radius: 5px;
+  height: 30px;
+  background-color: #3882f6;
+  border: none;
+  color: white;
+}
+
+.side-by-side {
+  display: flex;
+}
+
+.image {
+  background-color: grey;
+  margin-top: 25px;
+  margin-left: 100px;
+  height: 200px;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+}
+
+.heading-center {
+  text-align: center;
+  margin-top: 50px;
+  color: rgb(52, 52, 71);
+}
+
+.four-squares {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+
+.square {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 150px;
+
+}
+
+.image-placeholder {
+  width: 140px;
+  height: 140px;
+  border: 2px solid #3882f6; /* blue border */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.text-square {
+  text-align: center;
+  font-size: 18px;
+  color: rgb(52, 52, 71);
+}
+
+.message-box {
+  background-color: #e5e7eb; /* light gray */
+  padding: 60px 20px;
+  font-size: 18px;
+  font-style: italic;
+  margin-top: 50px;
+}
+
+.text-box {
+   max-width: 700px;
+  margin: 0 auto 10px;
+  color: rgb(52, 52, 71);
+  
+}
+
+
+.message {
+  color: rgb(52, 52, 71);
+  font-size: 25px;
+}
+
+.quote-name {
+  text-align: right;
+  padding-right: 30px;
+}
+
+.call-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3882f6;
+  color: white;
+  padding: 40px 60px;
+  border-radius: 10px;
+  margin: 50px auto;
+  width: 65%;
+}
+
+.call-text h3 {
+  margin: 0;
+}
+
+.call-text p {
+  margin: 5px 0 0;
+}
+
+.call-button {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.call-button:hover {
+  background-color: white;
+  color:#3882f6
+}
+
+.footer {
+  background-color: rgb(52, 52, 71);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
